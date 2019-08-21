@@ -51,6 +51,7 @@ class Song
   end
   
   def self.new_from_filename(file)
+<<<<<<< HEAD
     artist, song, genre_name = file.split(" - ") #destructuring
     fixed_name = genre_name.gsub('.mp3', "")
     artist = Artist.find_or_create_by_name(artist)
@@ -60,6 +61,9 @@ class Song
 
   def self.create_from_filename(file)
     new_from_filename(file).save
+=======
+    binding.pry 
+>>>>>>> cc9663bd0522d54e25a1084a778f51a605e02d7c
   end
   
 end
